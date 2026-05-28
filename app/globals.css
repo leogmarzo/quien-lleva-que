@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFF8E1;
+  --ink: #000000;
+  --accent: #FFD60A;
+  --avail: #B8FF8A;
+  --taken: #FF7AA2;
+  --surface: #FFFFFF;
+  --muted: #6B6B6B;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-avail: var(--avail);
+  --color-taken: var(--taken);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .neo-border {
+    border: 2.5px solid var(--ink);
+  }
+  .neo-shadow {
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+  .neo-shadow-sm {
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .neo-shadow-lg {
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .neo-shadow-none {
+    box-shadow: none;
+  }
+  .font-display {
+    font-family: var(--font-space-grotesk), -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  background: none;
+  font-family: inherit;
+}
